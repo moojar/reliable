@@ -1,0 +1,58 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "./foundation/scss/foundation.scss";
+// endbower
+
+$color-theme: #407CBF;
+
+$padding-small: 8px;
+$padding-med: 16px;
+$padding-large: 24px;
+$padding-xsmall: 5px;
+
+$border-header: 4px solid $color-theme;
+
+h1 { font-size: 18px;}
+
+.header {
+    border-bottom: $border-header;
+    .topbar {
+        background-color: $color-theme;
+        h1 {
+            padding: $padding-xsmall;
+            color: white;
+            font-weight: 200;
+            margin: 0;
+        }
+    }
+    .botbar{
+        height: 168px;
+        .reliable {
+            position: relative;
+            float: left;
+        }
+        .quality {
+            position: relative;
+            float: right;
+        }
+    }
+}
+
+.main 
+{
+    @include grid-row;
+    .sidebar {
+        @include grid-column(2);
+    }
+
+    .body {
+        @include grid-column(10);
+    }
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
