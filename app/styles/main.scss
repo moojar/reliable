@@ -1,0 +1,127 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "./foundation/scss/foundation.scss";
+// endbower
+
+$color-theme: #407CBF;
+$color-themedark: #2D5786;
+$color-lightgrey: #E6E6E6;
+
+$padding-small: 8px;
+$padding-med: 16px;
+$padding-large: 24px;
+$padding-xsmall: 5px;
+
+$border-header: 4px solid $color-theme;
+
+h1 { font-size: 18px;}
+
+.header {
+    border-bottom: $border-header;
+    .topbar {
+        background-color: $color-theme;
+        h1 {
+            padding: $padding-xsmall;
+            color: white;
+            font-weight: 200;
+            margin: 0;
+        }
+    }
+    .botbar{
+        height: 156px;
+        .reliable {
+            position: relative;
+            float: left;
+        }
+        .quality {
+            position: relative;
+            float: right;
+        }
+    }
+}
+
+.main 
+{
+    @include grid-row;
+    margin: 0;
+    max-width: 100%;
+    .sidebar {
+        @include grid-column(2);
+        padding: 0;
+        .navimage {
+            img {
+                width: 100%;
+            }
+        }
+        .navbar{
+            background-color: $color-lightgrey;
+            ul 
+            {
+                list-style-type: none;
+                text-align: center;
+                margin: 0;
+                li
+                {
+                color: $color-themedark;
+            border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+
+    .body {
+        @include grid-column(8);
+        padding: $padding-med;
+        h1 {
+            font-weight: 700;
+            margin: 0;
+        }
+        p
+        {
+            color: $color-themedark;
+        }
+    }
+
+    .rightbar {
+        @include grid-column (2);
+        p {
+            margin: 0;
+        }
+        padding: $padding-small;
+        margin: 0;
+        text-align: center;
+        .aic {
+            width: 100%;
+            padding:$padding-large;}
+        .oaic {
+            width: 100%;
+        padding:$padding-large;}
+    }
+}
+
+.footer {
+    margin: 0;
+    .top {
+        height: 24px;
+        margin:0;
+        background-color: grey;
+        border-bottom: 2px solid white;
+    }
+    .bot {
+        background-color: $color-theme;
+        height: 96px;
+        .copyright {
+            color: white;
+            text-align: center;
+            padding: $padding-xsmall;
+            margin: 0;
+        }
+    }
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
