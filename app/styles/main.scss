@@ -16,7 +16,9 @@ $padding-xsmall: 5px;
 $border-header: 4px solid $color-theme;
 
 h1 { font-size: 18px;}
-
+body {
+    min-width: 800px;
+}
 .header {
     border-bottom: $border-header;
     .topbar {
@@ -81,6 +83,14 @@ h1 { font-size: 18px;}
         {
             color: $color-themedark;
         }
+        .map {
+            text-align: center;
+        }
+        .services {
+            h1{margin-bottom: $padding-med;}
+            .service-list {
+            }
+        }
     }
 
     .rightbar {
@@ -88,15 +98,20 @@ h1 { font-size: 18px;}
         p {
             margin: 0;
         }
+        float: right;
         padding: $padding-small;
         margin: 0;
-        text-align: center;
+        text-align: center;  
         .aic {
             width: 100%;
             padding:$padding-large;}
+
+        max-width: 200px; 
         .oaic {
             width: 100%;
-        padding:$padding-large;}
+        padding:$padding-large;
+        max-width: 200px; 
+    }
     }
 }
 
@@ -117,11 +132,5 @@ h1 { font-size: 18px;}
             padding: $padding-xsmall;
             margin: 0;
         }
-    }
-}
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
     }
 }
